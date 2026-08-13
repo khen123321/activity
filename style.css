@@ -7,6 +7,8 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,6 +16,8 @@ body {
     line-height: 1.6;
     color: #3b2718;
     background-color: #f3e6d0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -21,8 +25,15 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+}
 
-/* Header */
+
+/* =========================
+   Header
+========================= */
+
 .header {
     background-color: #ead5b7;
     border-bottom: 2px solid #b8751a;
@@ -63,7 +74,10 @@ a {
 }
 
 
-/* Banner */
+/* =========================
+   Banner
+========================= */
+
 .banner {
     width: 100%;
     margin: 0;
@@ -74,11 +88,13 @@ a {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
 }
 
 
-/* Buttons */
+/* =========================
+   Buttons
+========================= */
+
 .btn {
     display: inline-block;
     background-color: #c9821c;
@@ -100,7 +116,10 @@ a {
 }
 
 
-/* Sections */
+/* =========================
+   Sections
+========================= */
+
 .section {
     padding: 70px 20px;
 }
@@ -113,14 +132,19 @@ a {
 }
 
 
-/* Products */
+/* =========================
+   Products
+========================= */
+
 .products-section {
     background-color: #f3e6d0;
 }
 
 .product-grid {
     max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -130,10 +154,15 @@ a {
     background-color: #fff8ed;
     border: 1px solid #c8a47a;
     border-radius: 10px;
-    padding: 20px;
+    padding: 18px;
     text-align: center;
+
     box-shadow: 0 6px 14px rgba(70, 45, 25, 0.15);
-    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
 }
 
 .product-card:hover {
@@ -142,26 +171,44 @@ a {
     box-shadow: 0 10px 20px rgba(70, 45, 25, 0.22);
 }
 
+
+/* Product Image Container */
+
 .product-image {
-    height: 300px;
+    width: 100%;
+    height: 390px;
+
     background-color: #ead5b7;
+
     border-radius: 8px;
     margin-bottom: 18px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     overflow: hidden;
 }
+
+
+/* Show entire product poster */
 
 .product-card img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: contain;
+    object-position: center;
 }
+
+
+/* Product Information */
 
 .product-card h3 {
     color: #3b2718;
+    font-size: 20px;
     margin-bottom: 8px;
 }
 
@@ -173,11 +220,15 @@ a {
     color: #a96510 !important;
     font-size: 22px;
     font-weight: bold;
+    margin-top: 8px;
     margin-bottom: 8px;
 }
 
 
-/* Why Choose Us */
+/* =========================
+   Why Choose Us
+========================= */
+
 .why-section {
     background-color: #ead5b7;
 }
@@ -185,6 +236,7 @@ a {
 .feature-grid {
     max-width: 1000px;
     margin: 0 auto;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
@@ -193,15 +245,21 @@ a {
 .feature-card {
     background-color: #fff8ed;
     color: #3b2718;
+
     border-radius: 8px;
     border: 1px solid #c8a47a;
+
     padding: 24px 16px;
+
     text-align: center;
     font-weight: bold;
 }
 
 
-/* About */
+/* =========================
+   About
+========================= */
+
 .about-section {
     background-color: #f3e6d0;
     text-align: center;
@@ -210,12 +268,16 @@ a {
 .about-section p {
     max-width: 800px;
     margin: 0 auto;
+
     font-size: 18px;
     color: #5b4030;
 }
 
 
-/* Contact */
+/* =========================
+   Contact
+========================= */
+
 .contact-section {
     background-color: #ead5b7;
     text-align: center;
@@ -223,6 +285,7 @@ a {
 
 .contact-section p {
     margin-bottom: 10px;
+
     font-size: 18px;
     color: #5b4030;
 }
@@ -230,6 +293,7 @@ a {
 .contact-section a {
     color: #9b5d12;
     font-weight: bold;
+    overflow-wrap: anywhere;
 }
 
 .contact-section a:hover {
@@ -242,18 +306,27 @@ a {
 }
 
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
+
 .footer {
     background-color: #d8bd98;
     color: #3b2718;
+
     border-top: 2px solid #b8751a;
+
     text-align: center;
     padding: 22px;
 }
 
 
-/* Tablet Layout */
+/* =========================
+   Tablet Layout
+========================= */
+
 @media (max-width: 900px) {
+
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -261,23 +334,222 @@ a {
     .feature-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .product-image {
+        height: 420px;
+    }
 }
 
 
-/* Mobile Layout */
+/* =========================
+   Mobile Layout
+========================= */
+
 @media (max-width: 600px) {
+
+    /* Header */
+
     .navbar {
         flex-direction: column;
+
+        padding: 10px 12px;
+
+        gap: 6px;
+    }
+
+    .logo {
+        font-size: 21px;
     }
 
     .nav-links {
-        flex-wrap: wrap;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: nowrap;
         justify-content: center;
-        gap: 14px;
+
+        gap: 13px;
     }
 
-    .product-grid,
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    /* Banner */
+
+    .banner {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /* Sections */
+
+    .section {
+        padding: 35px 14px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+
+
+    /* Products */
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .product-card {
+        width: 100%;
+
+        padding: 14px;
+
+        border-radius: 10px;
+    }
+
+
+    /*
+       IMPORTANT:
+       Use contain instead of cover.
+
+       This allows the ENTIRE product poster
+       to be visible without cropping.
+    */
+
+    .product-image {
+        width: 100%;
+
+        height: 410px;
+
+        background-color: #ead5b7;
+
+        border-radius: 8px;
+
+        margin-bottom: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+
+        display: block;
+    }
+
+
+    /* Product Text */
+
+    .product-card h3 {
+        font-size: 20px;
+
+        margin-bottom: 6px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .price {
+        font-size: 21px;
+
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+
+    /* Buy Now */
+
+    .small-btn {
+        width: 100%;
+        max-width: 220px;
+
+        padding: 11px 18px;
+
+        margin-top: 10px;
+    }
+
+
+    /* Why Choose Us */
+
     .feature-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 20px 14px;
+    }
+
+
+    /* About + Contact */
+
+    .about-section p,
+    .contact-section p {
+        font-size: 15px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 16px 12px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   Very Small Phones
+========================= */
+
+@media (max-width: 380px) {
+
+    .nav-links {
+        gap: 9px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-image {
+        height: 360px;
+    }
+
+    .product-card h3 {
+        font-size: 19px;
     }
 }
