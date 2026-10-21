@@ -1,2 +1,4 @@
 /assets/video/*
 !/assets/video/*.mp4
+.env.local
+.env*.local

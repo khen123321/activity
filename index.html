@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>.chat form{display:flex;gap:7px;padding:0;margin-top:12px;border:0;box-shadow:none}.chat form input{min-width:0}.chat form .btn{min-height:40px;padding:7px 12px}.chat[hidden]{display:none}</style>
   <meta name="generator" content="HTML Tidy for HTML5 for Apple macOS version 5.8.0">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -366,9 +367,16 @@
     </div>
   </aside>
   <div class="veil" data-close=""></div>
+  <button class="chat-toggle" id="chat-toggle" type="button" aria-label="Open LSJC Technologies AI Assistant" aria-expanded="false">💬</button>
+  <aside class="chat" id="chat" hidden aria-label="LSJC Technologies AI Assistant">
+    <div class="chat-head"><div><strong>LSJC Technologies AI Assistant</strong><small>Shopping help in English, Filipino, or Bisaya</small></div><button class="icon" id="chat-close" type="button" aria-label="Close assistant">×</button></div>
+    <div class="chat-body"><p id="chat-welcome">Hello! Welcome to LSJC Technologies! I'm your AI shopping assistant. How can I help you today?</p><div id="answer" aria-live="polite"></div><div id="quick"><button type="button" data-question="What are your product prices?">Prices</button><button type="button" data-question="What payment methods do you accept?">Payment</button><button type="button" data-question="Where do you deliver?">Delivery</button><button type="button" data-question="What is your return policy?">Returns</button></div><form id="chat-form"><label class="sr" for="chat-input">Ask a question</label><input id="chat-input" maxlength="1000" autocomplete="off" placeholder="Ask about products..."><button class="btn primary" type="submit">Send</button></form></div>
+    <a href="mailto:lsjctechnologies@gmail.com">Need human support? Email LSJC Technologies</a>
+  </aside>
   <dialog id="lightbox">
     <button class="icon" data-lightbox-close="" aria-label="Close enlarged image">×</button><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" hidden="">
     <p>Individual output image</p>
   </dialog>
 </body>
+<script src="chatbot.js" defer></script>
 </html>
