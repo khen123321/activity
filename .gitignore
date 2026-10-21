@@ -1,1 +1,2 @@
-/assets/video/
+/assets/video/*
+!/assets/video/*.mp4
