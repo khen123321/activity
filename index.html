@@ -13,7 +13,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="revisions.css">
+  <link rel="stylesheet" href="tabs.css">
+  <link rel="stylesheet" href="mobile-nav.css">
   <script src="script.js" defer></script>
+  <script src="tabs.js" defer></script>
+  <script src="mobile-nav.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -23,7 +27,7 @@
       aria-expanded="false" aria-controls="links"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="sr">Menu</span></button>
       <div class="links" id="links">
         <a href="#home">Home</a><a href="#products">Products</a><a href="#about">About Us</a><a href="#mission">Mission
-        & Vision</a><a href="#media">Media</a><a href="#contact">Contact</a>
+        & Vision</a><a href="#media">Media</a><a href="#contact">Contact</a><button class="menu-cart" type="button" data-cart="">Cart <em data-count="">0</em></button>
       </div><button class="cart-btn" data-cart="">Cart <em data-count="">0</em></button>
     </nav>
   </header>
